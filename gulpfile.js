@@ -23,8 +23,4 @@ gulp.task('lint', function() {
         .pipe(eslint.failOnError());
 });
 
-gulp.task('watch', ['build', 'lint'], function() {
-    gulp.watch('*.jsx', ['build']);
-});
-
-gulp.task('default', ['watch']);
+gulp.task('default', ['build', 'lint']);
